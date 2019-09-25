@@ -11,7 +11,6 @@ const onGetItems = (event) => {
     .catch(console.error)
 }
 
-<<<<<<< HEAD
 const onCreateItem = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -21,28 +20,27 @@ const onCreateItem = (event) => {
       onGetItems(event)
     })
     .catch(ui.onCreateSuccess)
+}
 
 const onUpdateItem = (event) => {
   event.preventDefault()
-
   const data = getFormFields(event.target)
   api.updateItem(data)
     .then(ui.updateItemsSuccess)
     .catch(console.error)
-
-=======
+}
 const onDeleteItem = (event) => {
   event.preventDefault()
   // Should get an id of the resourse that was targeted. At least did it in my other project.
   const id = $(event.target).closest('section').data('id')
   api.deleteItem(id)
-  .then(ui.deleteItemSuccess)
-  .catch(console.error)
->>>>>>> Add event function that triggers the ajax request
+    .then(ui.deleteItemSuccess)
+    .catch(console.error)
 }
 
 module.exports = {
   onGetItems,
-  onCreateItem
-  onUpdateItem
+  onCreateItem,
+  onUpdateItem,
+  onDeleteItem
 }

@@ -13,8 +13,6 @@ const getItems = function () {
   })
 }
 
-<<<<<<< HEAD
-
 const create = function (data) {
   return $.ajax({
     url: config.apiUrl + '/items',
@@ -23,7 +21,19 @@ const create = function (data) {
       Authorization: 'Token token=' + store.user.token
     },
     data
-=======
+  })
+}
+
+const updateItem = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/items/' + data.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const deleteItem = (itemId) => {
   return $.ajax({
     url: config.apiUrl + `/items/${itemId}`,
@@ -32,29 +42,12 @@ const deleteItem = (itemId) => {
       // We use bearer. Syntax?
       Authorization: `Bearer ${store.user.token}`
     }
->>>>>>> Create ajax request for 'delete'
   })
 }
 
 module.exports = {
   getItems,
-<<<<<<< HEAD
-  create
-}
-
-const updateItem = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/items/' + data.id,
-    method: 'PATCH',
-    headers: {
-      AuthorizationL 'Token token=' + store.user.token
-    }
-  })
-}
-
-module.exports = getItems
-
-=======
+  create,
+  updateItem,
   deleteItem
 }
->>>>>>> Create ajax request for 'delete'
