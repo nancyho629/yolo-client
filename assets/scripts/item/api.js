@@ -13,6 +13,7 @@ const getItems = function () {
   })
 }
 
+
 const create = function (data) {
   return $.ajax({
     url: config.apiUrl + '/items',
@@ -28,3 +29,16 @@ module.exports = {
   getItems,
   create
 }
+
+const updateItem = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/items/' + data.id,
+    method: 'PATCH',
+    headers: {
+      AuthorizationL 'Token token=' + store.user.token
+    }
+  })
+}
+
+module.exports = getItems
+

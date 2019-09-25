@@ -20,9 +20,19 @@ const onCreateItem = (event) => {
       onGetItems(event)
     })
     .catch(ui.onCreateSuccess)
+
+const onUpdateItem = (event) => {
+  event.preventDefault()
+
+  const data = getFormFields(event.target)
+  api.updateItem(data)
+    .then(ui.updateItemsSuccess)
+    .catch(console.error)
+
 }
 
 module.exports = {
   onGetItems,
   onCreateItem
+  onUpdateItem
 }
