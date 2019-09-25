@@ -1,6 +1,6 @@
 'use strict'
 
-// const getFormFields = require('../../../lib/get-form-fields.js')
+const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
 
@@ -11,6 +11,18 @@ const onGetItems = (event) => {
     .catch(console.error)
 }
 
+const onCreateItem = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.create(data)
+    .then(responseData => {
+      ui.onCreateSuccess(responseData)
+      onGetItems(event)
+    })
+    .catch(ui.onCreateSuccess)
+}
+
 module.exports = {
-  onGetItems
+  onGetItems,
+  onCreateItem
 }
