@@ -11,6 +11,16 @@ const onGetItems = (event) => {
     .catch(console.error)
 }
 
+const onUpdateItem = (event) => {
+  event.preventDefault()
+
+  const data = getFormFields(event.target)
+  api.updateItem(data)
+    .then(ui.updateItemsSuccess)
+    .catch(console.error)
+}
+
 module.exports = {
-  onGetItems
+  onGetItems,
+  onUpdateItem
 }

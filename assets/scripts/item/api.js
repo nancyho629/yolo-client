@@ -13,4 +13,14 @@ const getItems = function () {
   })
 }
 
+const updateItem = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/items/' + data.id,
+    method: 'PATCH',
+    headers: {
+      AuthorizationL 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = getItems

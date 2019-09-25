@@ -7,6 +7,10 @@ const getItemsSuccess = (data) => {
   $('form').trigger('reset')
 }
 
+const updateItemSuccess = (data) => {
+  console.log('Update item success!')
+}
+
 module.exports = {
   getItemsSuccess
 }
