@@ -13,6 +13,23 @@ const getItems = function () {
   })
 }
 
+
+const create = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/items',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+module.exports = {
+  getItems,
+  create
+}
+
 const updateItem = function (data) {
   return $.ajax({
     url: config.apiUrl + '/items/' + data.id,
@@ -24,3 +41,4 @@ const updateItem = function (data) {
 }
 
 module.exports = getItems
+
