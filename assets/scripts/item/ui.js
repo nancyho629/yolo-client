@@ -7,6 +7,7 @@ const getItemsSuccess = (data) => {
   $('form').trigger('reset')
 }
 
+<<<<<<< HEAD
 
 const onCreateSuccess = responseData => {
   $('#item-message').text(`You've added a new suggestion!!!`)
@@ -20,11 +21,19 @@ const onCreateFailure = function () {
 
 const updateItemSuccess = (data) => {
   console.log('Update item success!')
+=======
+const deleteItemSuccess = () => {
+  console.log('Deleted')
+>>>>>>> Modify ui.js on delete action
 }
 
 module.exports = {
   getItemsSuccess,
+<<<<<<< HEAD
   onCreateSuccess,
   onCreateFailure,
   updateItemSuccess
+=======
+  deleteItemSuccess
+>>>>>>> Modify ui.js on delete action
 }
