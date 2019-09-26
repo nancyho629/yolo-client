@@ -7,8 +7,10 @@
 // require('./example')
 const signInForm = require('./templates/auth.handlebars')
 const authEvents = require('./auth/event')
+const itemEvents = require('./item/event')
 
 $(() => {
   $('.main').html(signInForm)
   authEvents.addHandlers()
+  itemEvents.addHandlers()
 })
