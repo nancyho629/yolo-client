@@ -7,11 +7,11 @@ const getItemsSuccess = (data) => {
   console.log('Data is ', data)
   const indexItemsHtml = indexItemsTemplate({ items: data.items })
   // console.log('indexItemsHtml is ', indexItemsHtml)
-  $('#some-content').html(indexItemsHtml)
+  $('.content').html(indexItemsHtml)
   $('form').trigger('reset')
 }
 
-const onCreateSuccess = responseData => {
+const onCreateSuccess = () => {
   $('#item-message').text(`You've added a new suggestion!!!`)
   $('#signed-in-user').text('')
   $('form').trigger('reset')

@@ -1,5 +1,5 @@
 {{#each items as |item|}}
-  <section class="return" data-id="{{item.id}}">
+  <section class="return" data-id="{{item._id}}">
     <p>
     <div>Title:</div> {{item.title}}
     <p>Description:</p> {{item.description}}
@@ -10,10 +10,8 @@
     </p>
   </section>
   <nav>
-     {{#if item.editable}}
-          <button type="button" class="delete-item btn btn-danger" data-id="{{item.id}}">Delete</button>
-          <button type="button" class="update-item" data-id="{{item.id}}" data-name="{{item.name}}" data-description="{{item.description}}" data-owner="{{item.owner}}" data-completed="{{item.completed}}">Update</button>
-     {{/if}}
+          <button type="button" class="delete-item btn btn-danger" data-id="{{item._id}}">Delete</button>
+          <button type="button" class="update-item" data-id="{{item._id}}" data-name="{{item.name}}" data-description="{{item.description}}" data-owner="{{item.owner}}" data-completed="{{item.completed}}">Update</button>
   </nav>
   <hr>
 
