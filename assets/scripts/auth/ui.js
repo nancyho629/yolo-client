@@ -3,7 +3,6 @@ const changePwTemplate = require('../templates/change-pw.handlebars')
 const navBarForm = require('./../templates/navbar.handlebars')
 const signInForm = require('./../templates/auth.handlebars')
 const store = require('../store')
-// const listItemsTemplate = require('./../templates/index.handlebars')
 
 const signOutSuccess = function () {
   console.log('Signed out')
@@ -15,7 +14,6 @@ const signInSuccess = function (data) {
   store.user = data.user
   console.log('Signed in')
   $('nav').html(navBarForm)
-  // $('.content').html(listItemsTemplate)
 }
 
 const signUpSuccess = function () {

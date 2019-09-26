@@ -2,6 +2,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
+const itemEvents = require('../item/event.js')
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
@@ -22,7 +23,10 @@ const onSignIn = function (event) {
 
   const data = getFormFields(event.target)
   api.signIn(data)
-    .then(ui.signInSuccess)
+    .then(responseData => {
+      ui.signInSuccess(responseData)
+      itemEvents.onGetItems(event)
+    })
     .catch(ui.failure)
 }
 

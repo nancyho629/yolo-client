@@ -31,18 +31,30 @@ const onUpdateItem = (event) => {
     .then(ui.updateItemsSuccess)
     .catch(console.error)
 }
+
 const onDeleteItem = (event) => {
   event.preventDefault()
   // Should get an id of the resourse that was targeted. At least did it in my other project.
-  const id = $(event.target).closest('section').data('id')
+  const target = $(event.target)
+  console.log('target.data is ', target.data)
+  const id = target.data('id')
+  console.log('id is ', id)
   api.deleteItem(id)
     .then(ui.deleteItemSuccess)
     .catch(console.error)
 }
 
+// const onUpdateClick = (event) => {
+//   event.preventDefault()
+//
+// }
+
 const addHandlers = () => {
   $('#create-items').on('submit', onCreateItem)
   $('#getItems').on('click', onGetItems)
+  // TODO event delegation to attach listeners to update and delete buttons
+  // $('.content').on('click', '.update-item', onUpdateClick)
+  $('.content').on('click', '.delete-item', onDeleteItem)
 }
 
 module.exports = {
