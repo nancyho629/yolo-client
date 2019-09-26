@@ -38,7 +38,8 @@ const changePassword = function (data) {
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
+    },
+    data
   })
 }
 
