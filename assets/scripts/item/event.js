@@ -40,7 +40,10 @@ const onDeleteItem = (event) => {
   const id = target.data('id')
   console.log('id is ', id)
   api.deleteItem(id)
-    .then(ui.deleteItemSuccess)
+    .then(responseData => {
+      ui.deleteItemSuccess(responseData)
+      onGetItems(event)
+    })
     .catch(console.error)
 }
 
