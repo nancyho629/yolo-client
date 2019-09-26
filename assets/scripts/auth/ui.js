@@ -30,11 +30,17 @@ const failure = function () {
   console.log('Fail!!!!!')
 }
 
+const goChangePassword = () => {
+  $('.main').html('')
+  $('.main').html(changePwTemplate())
+}
+
 module.exports = {
   signOutSuccess,
   signInSuccess,
   failure,
   signUpFailure,
   signUpSuccess,
-  changePasswordSuccess
+  changePasswordSuccess,
+  goChangePassword
 }
