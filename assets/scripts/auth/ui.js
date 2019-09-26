@@ -4,6 +4,7 @@ const signOutSuccess = function () {
   console.log('Signed out')
 }
 
+<<<<<<< HEAD
 const signInSuccess = function () {
   console.log('Signed in')
 }
@@ -31,4 +32,16 @@ module.exports = {
   signUpSuccess,
   changePasswordSuccess
 
+=======
+const changePasswordSuccess = function (data) {
+  $('#message').text('Successful password change')
+  $('#message').removeClass()
+  $('#message').addClass('Success')
+  $('form').trigger('reset')
+}
+
+module.exports = {
+  signOutSuccess,
+  changePasswordSuccess
+>>>>>>> Add 'change password' to auth files
 }

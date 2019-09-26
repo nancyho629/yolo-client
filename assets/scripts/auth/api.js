@@ -14,6 +14,7 @@ const signOut = function () {
   })
 }
 
+<<<<<<< HEAD
 // Creates Token
 const signIn = function (data) {
   return $.ajax({
@@ -32,12 +33,15 @@ const signUp = function (data) {
   })
 }
 
+=======
+>>>>>>> Add 'change password' to auth files
 const changePassword = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
+<<<<<<< HEAD
     }
   })
 }
@@ -45,5 +49,14 @@ module.exports = {
   signOut,
   signIn,
   signUp,
+=======
+    },
+    data
+  })
+}
+
+module.exports = {
+  signOut,
+>>>>>>> Add 'change password' to auth files
   changePassword
 }
