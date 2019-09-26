@@ -21,18 +21,49 @@
           <legend>Create a YOLO Item</legend>
             <input type="text" name="item[name]" placeholder="YOLO Item">
             <input type="text" name="item[description]" placeholder="Description">
+            <br>
+            <input type="checkbox" name="item[completed]" value="true"> Completed
+            <br>
+            <input type="checkbox" name="item[completed]" value="false"> Not yet
+            <br>
             <button class="create">Submit</button>
         </fieldset>
       </form>
       <br>
-      <form id="create-items" class="border">
-        <fieldset>
-          <legend>Update a YOLO Item</legend>
-            <input type="text" name="item[id]" placeholder="Item ID">
-            <input type="text" name="item[name]" placeholder="YOLO Item">
-            <input type="text" name="item[description]" placeholder="Description">
-            <button class="create">Submit</button>
-        </fieldset>
+
+      <div class="modal fade" id="item-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Update YOLO Item</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <form id="update-item-modal">
+      <div class="modal-body mx-3">
+        <input id="rid" type="text" name="item[id]" hidden>
+
+        <div class="md-form mb-4">
+          <input type="text" id="iname" class="form-control validate" name="item[name]" placeholder="Name">
+        </div>
+        <div class="md-form mb-4">
+          <input type="text" id="item-desc" class="form-control validate" name="item[description]" placeholder="Description">
+        </div>
+        <div class="md-form mb-4">
+          <input type="checkbox" id="item-completed" class="form-control validate" name="item[completed]" value="true"> Completed <br>
+          <input type="checkbox" id="item-not-completed" class="form-control validate" name="item[completed]" value="false"> Not Yet <br>
+
+        <div class="modal-footer d-flex justify-content-center">
+            <button type="submit" class="btn btn-info btn-block my-4 submit-item">Update</button>
+          </div>
+      </div>
+
       </form>
+    </div>
+  </div>
+</div>
     </body>
 </html>
