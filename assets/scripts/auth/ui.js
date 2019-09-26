@@ -2,6 +2,7 @@
 const changePwTemplate = require('../templates/change-pw.handlebars')
 const navBarForm = require('./../templates/navbar.handlebars')
 const signInForm = require('./../templates/auth.handlebars')
+const store = require('../store')
 
 const signOutSuccess = function () {
   console.log('Signed out')
@@ -9,9 +10,10 @@ const signOutSuccess = function () {
   $('nav').html('')
 }
 
-const signInSuccess = function () {
+const signInSuccess = function (data) {
+  store.user = data.user
   console.log('Signed in')
-  $('.main').html(navBarForm)
+  $('nav').html(navBarForm)
 }
 
 const signUpSuccess = function () {
@@ -24,14 +26,17 @@ const signUpFailure = function () {
 
 const changePasswordSuccess = function (data) {
   console.log('Password Changed')
+  console.log('changepw success', data)
 }
 
-const failure = function () {
+const failure = function (data) {
   console.log('Fail!!!!!')
+  console.log('fail pw', data)
 }
 
 const goChangePassword = () => {
   $('.main').html('')
+  console.log('did it show change pw form?')
   $('.main').html(changePwTemplate())
 }
 
