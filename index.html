@@ -16,17 +16,21 @@
       <nav></nav>
       <section class="main"></section>
 
+      <fieldset>
+        <div class="content" id="some-content"></div>
+      </fieldset>
+
       <form id="create-items" class="border">
         <fieldset>
           <legend>Create a YOLO Item</legend>
-            <input type="text" name="item[name]" placeholder="YOLO Item">
+            <input type="text" name="item[title]" placeholder="YOLO Item">
             <input type="text" name="item[description]" placeholder="Description">
             <br>
-            <input type="checkbox" name="item[completed]" value="true"> Completed
+            <input type="radio" name="item[completed]" value="true"> Completed
             <br>
-            <input type="checkbox" name="item[completed]" value="false"> Not yet
+            <input type="radio" name="item[completed]" value="false" checked> Not yet
             <br>
-            <button class="create">Submit</button>
+            <button type="submit" class="create">Submit</button>
         </fieldset>
       </form>
       <br>
@@ -65,5 +69,6 @@
     </div>
   </div>
 </div>
+
     </body>
 </html>

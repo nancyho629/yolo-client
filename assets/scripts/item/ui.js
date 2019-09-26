@@ -1,9 +1,13 @@
 'use strict'
 
 // const store = require('../store')
+const indexItemsTemplate = require('./../templates/index.handlebars')
 
 const getItemsSuccess = (data) => {
-  $('.content').html('')
+  console.log('Data is ', data)
+  const indexItemsHtml = indexItemsTemplate({ items: data.items })
+  // console.log('indexItemsHtml is ', indexItemsHtml)
+  $('#some-content').html(indexItemsHtml)
   $('form').trigger('reset')
 }
 
