@@ -16,6 +16,10 @@ const signUpFailure = function () {
   console.log('Sign Up Failed :(')
 }
 
+const changePasswordSuccess = function (data) {
+  console.log('Password Changed')
+}
+
 const failure = function () {
   console.log('Fail!!!!!')
 }
@@ -24,6 +28,7 @@ module.exports = {
   signInSuccess,
   failure,
   signUpFailure,
-  signUpSuccess
+  signUpSuccess,
+  changePasswordSuccess
 
 }
