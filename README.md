@@ -19,7 +19,8 @@ On the back-end, we used Mongoose and Express to set up a NoSQL database that is
   - Index
   - Show
   - Update
-  - 
+  - Destroy
+After we had this set up, we began divvying up tasks required to build the front-end. Each team member was responsible for creating the functionality for one CRUD action through the front-end.
 
 Link to wireframes
 
