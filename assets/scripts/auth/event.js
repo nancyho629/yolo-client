@@ -6,6 +6,9 @@ const ui = require('./ui')
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
+  $('.main').on('submit', '.change-password', onChangePassword)
+  $('nav').on('submit', '#sign-out', onSignOut)
+  $('nav').on('submit', '.change-pw', onGoChangePassword)
 }
 
 const onSignOut = function (event) {
@@ -39,10 +42,16 @@ const onChangePassword = function (event) {
     .catch(ui.failure)
 }
 
+const onGoChangePassword = event => {
+  event.preventDefault()
+  ui.goChangePassword()
+}
+
 module.exports = {
   addHandlers,
   onSignOut,
   onSignIn,
   onSignUp,
-  onChangePassword
+  onChangePassword,
+  onGoChangePassword
 }
