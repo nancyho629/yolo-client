@@ -21,5 +21,6 @@ const onSignIn = function (event) {
 }
 
 module.exports = {
-  onSignOut
+  onSignOut,
+  onSignIn
 }

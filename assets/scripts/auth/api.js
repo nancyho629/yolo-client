@@ -24,5 +24,6 @@ const signIn = function (data) {
 }
 
 module.exports = {
-  signOut
+  signOut,
+  signIn
 }

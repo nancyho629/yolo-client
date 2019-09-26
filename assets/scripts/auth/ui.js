@@ -9,5 +9,6 @@ const signInSuccess = function () {
 }
 
 module.exports = {
-  signOutSuccess
+  signOutSuccess,
+  signInSuccess
 }
