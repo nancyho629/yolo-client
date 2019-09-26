@@ -38,17 +38,9 @@ const onDeleteItem = (event) => {
     .catch(console.error)
 }
 
-const onSignOut = function (event) {
-  event.preventDefault()
-  api.signOut()
-    .then(ui.signOutSuccess)
-    .catch(ui.failure)
-}
-
 module.exports = {
   onGetItems,
   onCreateItem,
   onUpdateItem,
-  onDeleteItem,
-  onSignOut
+  onDeleteItem
 }
