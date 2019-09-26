@@ -1,5 +1,5 @@
 'use strict'
-
+const getFormFields = require('../../../get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 
@@ -31,14 +31,11 @@ const onSignUp = function (event) {
     .catch(ui.failure)
 }
 
-=======
->>>>>>> Add 'change password' to auth files
 const onChangePassword = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
-<<<<<<< HEAD
     .catch(ui.failure)
 }
 
@@ -47,12 +44,5 @@ module.exports = {
   onSignOut,
   onSignIn,
   onSignUp,
-=======
-    .catch(ui.changePasswordFailure)
-}
-
-module.exports = {
-  onSignOut,
->>>>>>> Add 'change password' to auth files
   onChangePassword
 }
