@@ -23,6 +23,7 @@ const changePasswordSuccess = function (data) {
 const failure = function () {
   console.log('Fail!!!!!')
 }
+
 module.exports = {
   signOutSuccess,
   signInSuccess,
@@ -30,5 +31,4 @@ module.exports = {
   signUpFailure,
   signUpSuccess,
   changePasswordSuccess
-
 }

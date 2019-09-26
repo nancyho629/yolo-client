@@ -41,6 +41,7 @@ const changePassword = function (data) {
     }
   })
 }
+
 module.exports = {
   signOut,
   signIn,
