@@ -4,7 +4,9 @@
     <div>Title:</div> {{item.title}}
     <p>Description:</p> {{item.description}}
     <b>Owner:</b> {{item.owner}}
-    <b>Completed:</b> {{item.completed}}
+    {{#if item.completed }}
+    <img class="completed-checkmark" src="https://www.pngfind.com/pngs/m/292-2923099_transparent-red-check-mark-hd-png-download.png" alt="Complete!">
+    {{/if}}
     </p>
   </section>
   <nav>
