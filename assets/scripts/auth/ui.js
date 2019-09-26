@@ -8,7 +8,22 @@ const signInSuccess = function () {
   console.log('Signed in')
 }
 
+const signUpSuccess = function () {
+  console.log('Signed Up!!!')
+}
+
+const signUpFailure = function () {
+  console.log('Sign Up Failed :(')
+}
+
+const failure = function () {
+  console.log('Fail!!!!!')
+}
 module.exports = {
   signOutSuccess,
-  signInSuccess
+  signInSuccess,
+  failure,
+  signUpFailure,
+  signUpSuccess
+
 }

@@ -23,7 +23,17 @@ const signIn = function (data) {
   })
 }
 
+// Sign up
+const signUp = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/sign-up',
+    method: 'POST',
+    data
+  })
+}
+
 module.exports = {
   signOut,
-  signIn
+  signIn,
+  signUp
 }
