@@ -38,6 +38,7 @@ const signUpFailure = function () {
 
 const changePasswordSuccess = function (data) {
   $('#login-message').text('Change Password Successfully')
+  $('.change-pwd').html('')
 }
 
 const changePasswordFailure = function (data) {
@@ -51,8 +52,8 @@ const failure = function (data) {
 }
 
 const goChangePassword = () => {
-  $('.main').html('')
-  $('.main').html(changePwTemplate())
+  // $('.main').html('')
+  $('.change-pwd').html(changePwTemplate())
 }
 
 module.exports = {

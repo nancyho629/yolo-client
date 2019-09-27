@@ -5,11 +5,9 @@ const ui = require('./ui')
 const itemEvents = require('../item/event.js')
 
 const addHandlers = () => {
-  // $('#sign-up').on('submit', onSignUp)
-  // $('#sign-in').on('submit', onSignIn)
   $('.main').on('submit', '#sign-in', onSignIn)
   $('.main').on('submit', '#sign-up', onSignUp)
-  $('.main').on('submit', '.change-password', onChangePassword)
+  $('.change-pwd').on('submit', '.change-password', onChangePassword)
   $('nav').on('submit', '#sign-out', onSignOut)
   $('nav').on('submit', '.change-pw', onGoChangePassword)
 }
