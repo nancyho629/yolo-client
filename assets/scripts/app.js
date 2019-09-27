@@ -11,7 +11,6 @@ const itemEvents = require('./item/event')
 
 $(() => {
   $('.main').html(signInForm)
-  $('.create-item').hide()
   authEvents.addHandlers()
   itemEvents.addHandlers()
 })
