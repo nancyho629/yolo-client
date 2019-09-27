@@ -13,6 +13,7 @@ const signOutSuccess = function () {
   $('.main').html(signInForm)
   $('nav').html('')
   $('.content').html('')
+  $('.change-pwd').html('')
 }
 
 const signInSuccess = function (data) {
