@@ -6,7 +6,9 @@ const store = require('../store')
 
 const signOutSuccess = function () {
   $('#login-message').text('Signed Out Successfully')
-  $('.main').html(signInForm())
+  $('#message').text('')
+  $('#item-message').text('')
+  $('.main').html(signInForm)
   $('nav').html('')
   $('.create-item').hide()
   $('.content').html('')
