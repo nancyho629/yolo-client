@@ -19,7 +19,7 @@ On the back-end, we used Mongoose and Express to set up a NoSQL database that is
  - [Yolo Bucket Deployed Website](https://team-elmn.github.io/yolo-client/)
  - [Yolo Bucket Client Repo](https://github.com/Team-ELMN/yolo-client)
  - [Yolo Bucket API Repo](https://github.com/Team-ELMN/yolo-api)
- - [Yolo Buckket API Deployed](https://yolo-bucket-api.herokuapp.com/)
+ - [Yolo Bucket API Deployed](https://yolo-bucket-api.herokuapp.com/)
 
  ## Future Features
  - Implement a one to many relationship so users can have many bucketlists and bucketlists can have many items
@@ -33,6 +33,7 @@ On the back-end, we used Mongoose and Express to set up a NoSQL database that is
   - Show
   - Update
   - Destroy
+
 After we had this set up, we began divvying up tasks required to build the front-end. Each team member was responsible for creating the functionality for one CRUD action through the front-end.
 
 # Wireframe:
