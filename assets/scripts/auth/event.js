@@ -41,7 +41,6 @@ const onSignUp = function (event) {
 const onChangePassword = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('changepw data:', data)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
@@ -49,7 +48,6 @@ const onChangePassword = function (event) {
 
 const onGoChangePassword = event => {
   event.preventDefault()
-  console.log('does it work?')
   ui.goChangePassword()
 }
 
