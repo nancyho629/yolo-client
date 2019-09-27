@@ -2,24 +2,24 @@
 const changePwTemplate = require('../templates/change-pw.handlebars')
 const navBarForm = require('./../templates/navbar.handlebars')
 const signInForm = require('./../templates/auth.handlebars')
+const createForm = require('./../templates/create.handlebars')
 const store = require('../store')
 
 const signOutSuccess = function () {
+  store.user = null
   $('#login-message').text('Signed Out Successfully')
   $('#message').text('')
   $('#item-message').text('')
   $('.main').html(signInForm)
   $('nav').html('')
-  $('.create-item').hide()
   $('.content').html('')
 }
 
 const signInSuccess = function (data) {
   store.user = data.user
   $('#login-message').text('Signed In Successfully')
-  $('.main').html('')
+  $('.main').html(createForm)
   $('nav').html(navBarForm)
-  $('.create-item').show()
 }
 
 const signUpSuccess = function () {

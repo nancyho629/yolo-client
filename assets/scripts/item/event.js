@@ -68,7 +68,7 @@ const onUpdateClick = (event) => {
 }
 
 const addHandlers = () => {
-  $('#create-items').on('submit', onCreateItem)
+  $('.main').on('submit', '#create-items', onCreateItem)
   $('#getItems').on('click', onGetItems)
   // TODO event delegation to attach listeners to update and delete buttons
   $('.content').on('click', '.update-item', onUpdateClick)
