@@ -27,8 +27,13 @@ const onCreateItem = (event) => {
 const onUpdateItem = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.updateItem(data)
+  const dataId = data.item._id
+  api.updateItem(data, dataId)
     .then(ui.updateItemsSuccess)
+    .then(
+      $('#item-modal').modal('hide')
+    )
+    .then(onGetItems(event))
     .catch(console.error)
 }
 
@@ -54,9 +59,11 @@ const onUpdateClick = (event) => {
   const title = target.data('title')
   const description = target.data('description')
   const completed = target.data('completed')
+  const id = target.data('id')
   $('#item-modal').modal('show')
   $('#iname').val(title)
   $('#item-desc').val(description)
+  $('#item-id').val(id)
   if (completed) {
     $('#item-true').attr('checked', true)
   } else {
@@ -69,6 +76,7 @@ const addHandlers = () => {
   $('#getItems').on('click', onGetItems)
   // TODO event delegation to attach listeners to update and delete buttons
   $('.content').on('click', '.update-item', onUpdateClick)
+  $('#item-modal').on('submit', onUpdateItem)
   $('.content').on('click', '.delete-item', onDeleteItem)
 }
 
