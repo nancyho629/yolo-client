@@ -8,7 +8,6 @@ const addHandlers = () => {
   // $('#sign-up').on('submit', onSignUp)
   // $('#sign-in').on('submit', onSignIn)
   $('.main').on('submit', '#sign-in', onSignIn)
-  $('.main').on('submit', '#sign-up', onSignUp)
   $('.main').on('submit', '.change-password', onChangePassword)
   $('nav').on('submit', '#sign-out', onSignOut)
   $('nav').on('submit', '.change-pw', onGoChangePassword)
@@ -29,7 +28,7 @@ const onSignIn = function (event) {
       ui.signInSuccess(responseData)
       itemEvents.onGetItems(event)
     })
-    .catch(ui.failure)
+    .catch(ui.signInFailure)
 }
 
 const onSignUp = function (event) {
@@ -37,7 +36,7 @@ const onSignUp = function (event) {
   const data = getFormFields(event.target)
   api.signUp(data)
     .then(ui.signUpSuccess)
-    .catch(ui.failure)
+    .catch(ui.signUpFailure)
 }
 
 const onChangePassword = function (event) {
@@ -46,7 +45,7 @@ const onChangePassword = function (event) {
   console.log('changepw data:', data)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
-    .catch(ui.failure)
+    .catch(ui.changePasswordFailure)
 }
 
 const onGoChangePassword = event => {
