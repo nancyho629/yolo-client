@@ -2,8 +2,9 @@
   <section class="return" data-id="{{item._id}}">
     <p>
     <div>Title:</div> {{item.title}}
+    <hr>
     <p>Description:</p> {{item.description}}
-    <b>Owner:</b> {{item.owner}}
+    <hr>
     {{#if item.completed }}
     <img class="completed-checkmark" src="../../../public/red_checkmark.png" alt="Complete!">
     {{/if}}
