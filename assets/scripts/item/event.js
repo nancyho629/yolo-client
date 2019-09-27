@@ -47,16 +47,28 @@ const onDeleteItem = (event) => {
     .catch(console.error)
 }
 
-// const onUpdateClick = (event) => {
-//   event.preventDefault()
-//
-// }
+const onUpdateClick = (event) => {
+  event.preventDefault()
+  const target = $(event.target)
+
+  const title = target.data('title')
+  const description = target.data('description')
+  const completed = target.data('completed')
+  $('#item-modal').modal('show')
+  $('#iname').val(title)
+  $('#item-desc').val(description)
+  if (completed) {
+    $('#item-true').attr('checked', true)
+  } else {
+    $('#item-false').attr('checked', true)
+  }
+}
 
 const addHandlers = () => {
   $('#create-items').on('submit', onCreateItem)
   $('#getItems').on('click', onGetItems)
   // TODO event delegation to attach listeners to update and delete buttons
-  // $('.content').on('click', '.update-item', onUpdateClick)
+  $('.content').on('click', '.update-item', onUpdateClick)
   $('.content').on('click', '.delete-item', onDeleteItem)
 }
 
