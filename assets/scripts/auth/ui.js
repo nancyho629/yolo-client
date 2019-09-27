@@ -5,7 +5,7 @@ const signInForm = require('./../templates/auth.handlebars')
 const store = require('../store')
 
 const signOutSuccess = function () {
-  console.log('Signed out')
+  $('#login-message').text('Signed Out Successfully')
   $('.main').html(signInForm())
   $('nav').html('')
   $('.create-item').hide()
@@ -14,33 +14,32 @@ const signOutSuccess = function () {
 
 const signInSuccess = function (data) {
   store.user = data.user
+  $('#login-message').text('Signed In Successfully')
   $('.main').html('')
-  console.log('Signed in')
   $('nav').html(navBarForm)
   $('.create-item').show()
 }
 
 const signUpSuccess = function () {
-  console.log('Signed Up!!!')
+  $('#login-message').text('Signed Up Successfully')
 }
 
 const signUpFailure = function () {
-  console.log('Sign Up Failed :(')
+  $('#login-message').text('Sign Up Failed')
+  $('form').trigger('reset')
 }
 
 const changePasswordSuccess = function (data) {
-  console.log('Password Changed')
-  console.log('changepw success', data)
+  $('#login-message').text('Change Password Successfully')
 }
 
 const failure = function (data) {
-  console.log('Fail!!!!!')
-  console.log('fail pw', data)
+  $('#login-message').text('Error!')
+  $('form').trigger('reset')
 }
 
 const goChangePassword = () => {
   $('.main').html('')
-  console.log('did it show change pw form?')
   $('.main').html(changePwTemplate())
 }
 
