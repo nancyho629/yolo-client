@@ -13,6 +13,19 @@
     </head>
     <body>
       <h1>YOLO</h1>
+
+      <!-- Messages -->
+      <section class='login-messages'>
+      <div id="login-message"></div>
+      </section>
+      <section class='item-messages'>
+      <div id="item-message"></div>
+      </section>
+      <section class='messages'>
+      <div id="message"></div>
+      </section>
+      <!-- Messages end -->
+
       <nav></nav>
       <section class="main"></section>
 
@@ -20,8 +33,8 @@
         <form id="create-items" class="border">
           <fieldset>
             <legend>Create a YOLO Item</legend>
-            <input type="text" name="item[title]" placeholder="YOLO Item">
-            <input type="text" name="item[description]" placeholder="Description">
+            <input type="text" name="item[title]" placeholder="YOLO Item" required>
+            <input type="text" name="item[description]" placeholder="Description" required>
             <br>
             <input type="radio" name="item[completed]" value="true"> Completed
             <br>
