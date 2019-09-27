@@ -1,13 +1,15 @@
 {{#each items as |item|}}
   <section class="return" data-id="{{item._id}}">
     <p>
-    <div>Title:</div> {{item.title}}
-    <hr>
-    <p>Description:</p> {{item.description}}
-    <hr>
-    {{#if item.completed }}
-    <img class="completed-checkmark" src="../../../public/red_checkmark.png" alt="Complete!">
-    {{/if}}
+    <strong>Title</strong>: {{item.title}}
+    <br>
+    <strong>Description:</strong> {{item.description}}
+    <br>
+    <strong>Completed:</strong> {{item.completed}}
+    <!-- {{#if item.completed}}
+    {{item.completed}}
+    <img class="completed-checkmark" src="../../../public/red_checkmark.png" alt="Complete!">}}
+    {{/if}} -->
     </p>
   </section>
   <nav>
