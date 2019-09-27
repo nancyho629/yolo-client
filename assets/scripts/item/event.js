@@ -6,7 +6,6 @@ const ui = require('./ui')
 
 const onGetItems = (event) => {
   event.preventDefault()
-  console.log('Does onGetItems work?!?!')
   api.getItems()
     .then(ui.getItemsSuccess)
     .catch(console.error)
@@ -15,7 +14,6 @@ const onGetItems = (event) => {
 const onCreateItem = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('Create data is: ', data)
   api.create(data)
     .then(responseData => {
       ui.onCreateSuccess(responseData)
@@ -41,9 +39,7 @@ const onDeleteItem = (event) => {
   event.preventDefault()
   // Should get an id of the resourse that was targeted. At least did it in my other project.
   const target = $(event.target)
-  console.log('target.data is ', target.data)
   const id = target.data('id')
-  console.log('id is ', id)
   api.deleteItem(id)
     .then(responseData => {
       ui.deleteItemSuccess(responseData)
@@ -65,9 +61,9 @@ const onUpdateClick = (event) => {
   $('#item-desc').val(description)
   $('#item-id').val(id)
   if (completed) {
-    $('#item-true').attr('checked', true)
+    $('#item-true').prop('checked', true)
   } else {
-    $('#item-false').attr('checked', true)
+    $('#item-false').prop('checked', true)
   }
 }
 
