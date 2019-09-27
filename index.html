@@ -16,13 +16,10 @@
       <nav></nav>
       <section class="main"></section>
 
-      <fieldset>
-        <div class="content" id="some-content"></div>
-      </fieldset>
-
-      <form id="create-items" class="border">
-        <fieldset>
-          <legend>Create a YOLO Item</legend>
+      <div class="create-item">
+        <form id="create-items" class="border">
+          <fieldset>
+            <legend>Create a YOLO Item</legend>
             <input type="text" name="item[title]" placeholder="YOLO Item">
             <input type="text" name="item[description]" placeholder="Description">
             <br>
@@ -31,9 +28,16 @@
             <input type="radio" name="item[completed]" value="false" checked> Not yet
             <br>
             <button type="submit" class="create">Submit</button>
-        </fieldset>
-      </form>
-      <br>
+          </fieldset>
+        </form>
+        <br>
+      </div>
+
+      <fieldset>
+        <div class="content" id="some-content"></div>
+      </fieldset>
+
+
 
       <div class="modal fade" id="item-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
