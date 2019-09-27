@@ -5,7 +5,6 @@ const indexItemsTemplate = require('./../templates/index.handlebars')
 
 const getItemsSuccess = (data) => {
   const indexItemsHtml = indexItemsTemplate({ items: data.items })
-  // console.log('indexItemsHtml is ', indexItemsHtml)
   $('.content').html(indexItemsHtml)
   $('form').trigger('reset')
   $('#item-message').text('Got All Your Bucket List Items!')
