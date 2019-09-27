@@ -24,13 +24,14 @@ const create = function (data) {
   })
 }
 
-const updateItem = function (data) {
+const updateItem = function (data, itemId) {
   return $.ajax({
-    url: config.apiUrl + '/items/' + data.id,
+    url: config.apiUrl + '/items/' + itemId,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
+    },
+    data
   })
 }
 

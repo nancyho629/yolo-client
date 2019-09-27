@@ -8,12 +8,16 @@ const signOutSuccess = function () {
   console.log('Signed out')
   $('.main').html(signInForm())
   $('nav').html('')
+  $('.create-item').hide()
+  $('.content').html('')
 }
 
 const signInSuccess = function (data) {
   store.user = data.user
+  $('.main').html('')
   console.log('Signed in')
   $('nav').html(navBarForm)
+  $('.create-item').show()
 }
 
 const signUpSuccess = function () {
