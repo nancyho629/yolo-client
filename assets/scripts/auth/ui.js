@@ -22,6 +22,11 @@ const signInSuccess = function (data) {
   $('nav').html(navBarForm)
 }
 
+const signInFailure = function (data) {
+  $('#login-message').text('Sign In Failed')
+  $('form').trigger('reset')
+}
+
 const signUpSuccess = function () {
   $('#login-message').text('Signed Up Successfully')
 }
@@ -33,6 +38,11 @@ const signUpFailure = function () {
 
 const changePasswordSuccess = function (data) {
   $('#login-message').text('Change Password Successfully')
+}
+
+const changePasswordFailure = function (data) {
+  $('#login-message').text('Change Password Failed')
+  $('form').trigger('reset')
 }
 
 const failure = function (data) {
@@ -52,5 +62,7 @@ module.exports = {
   signUpFailure,
   signUpSuccess,
   changePasswordSuccess,
-  goChangePassword
+  goChangePassword,
+  signInFailure,
+  changePasswordFailure
 }
