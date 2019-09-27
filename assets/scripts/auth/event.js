@@ -10,6 +10,7 @@ const addHandlers = () => {
   $('.change-pwd').on('submit', '.change-password', onChangePassword)
   $('nav').on('submit', '#sign-out', onSignOut)
   $('nav').on('submit', '.change-pw', onGoChangePassword)
+  $('.change-pwd').on('click', '#cancel-pwd', () => { $('.change-pwd').html('') })
 }
 
 const onSignOut = function (event) {

@@ -8,7 +8,7 @@ const onGetItems = (event) => {
   event.preventDefault()
   api.getItems()
     .then(ui.getItemsSuccess)
-    .catch(console.error)
+    .catch(ui.failure)
 }
 
 const onCreateItem = (event) => {
@@ -32,20 +32,8 @@ const onUpdateItem = (event) => {
       $('#item-modal').modal('hide')
       onGetItems(event)
     })
-    .catch(console.error)
+    .catch(ui.failure)
 }
-// const onUpdateItem = (event) => {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   const dataId = data.item._id
-//   api.updateItem(data, dataId)
-//     .then(ui.updateItemsSuccess)
-//     .then(
-//       $('#item-modal').modal('hide')
-//     )
-//     .then(onGetItems(event))
-//     .catch(console.error)
-// }
 
 const onDeleteItem = (event) => {
   event.preventDefault()
@@ -57,7 +45,7 @@ const onDeleteItem = (event) => {
       ui.deleteItemSuccess(responseData)
       onGetItems(event)
     })
-    .catch(console.error)
+    .catch(ui.failure)
 }
 
 const onUpdateClick = (event) => {

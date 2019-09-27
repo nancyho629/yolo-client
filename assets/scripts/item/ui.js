@@ -29,10 +29,15 @@ const deleteItemSuccess = () => {
   $('#message').text(`You've deleted an item!!!`)
 }
 
+const failure = () => {
+  $('#message').text(`Unexpected error`)
+}
+
 module.exports = {
   getItemsSuccess,
   onCreateSuccess,
   onCreateFailure,
   updateItemsSuccess,
-  deleteItemSuccess
+  deleteItemSuccess,
+  failure
 }
