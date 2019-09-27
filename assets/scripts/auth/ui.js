@@ -30,6 +30,7 @@ const signInFailure = function (data) {
 
 const signUpSuccess = function () {
   $('#login-message').text('Signed Up Successfully')
+  $('form').trigger('reset')
 }
 
 const signUpFailure = function () {
@@ -40,6 +41,7 @@ const signUpFailure = function () {
 const changePasswordSuccess = function (data) {
   $('#login-message').text('Change Password Successfully')
   $('.change-pwd').html('')
+  $('form').trigger('reset')
 }
 
 const changePasswordFailure = function (data) {
