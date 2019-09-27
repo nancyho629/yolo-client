@@ -1,0 +1,21 @@
+{{#each items as |item|}}
+  <section class="return" data-id="{{item._id}}">
+    <p>
+    <strong>Title</strong>: {{item.title}}
+    <br>
+    <strong>Description:</strong> {{item.description}}
+    <br>
+    <strong>Completed:</strong> {{item.completed}}
+    <!-- {{#if item.completed}}
+    {{item.completed}}
+    <img class="completed-checkmark" src="../../../public/red_checkmark.png" alt="Complete!">}}
+    {{/if}} -->
+    </p>
+  </section>
+  <nav>
+          <button type="button" class="delete-item btn btn-danger" data-id="{{item._id}}">Delete</button>
+          <button type="button" class="update-item" data-id="{{item._id}}" data-title="{{item.title}}" data-description="{{item.description}}" data-owner="{{item.owner}}" data-completed="{{item.completed}}">Update</button>
+  </nav>
+  <hr>
+
+{{/each}}
