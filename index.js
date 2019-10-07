@@ -4,6 +4,7 @@
 // var example = require('./example');
 
 import 'bootstrap'
+import 'animate.css'
 
 // allows usage of new JS features
 require('babel-polyfill')
