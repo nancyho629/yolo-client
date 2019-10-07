@@ -10,3 +10,15 @@ body {
   background-color: green;
   padding-bottom: 10px;
 }
+
+.animated {
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: zoomOutDown;
+}
+
+#item-display {
+  color: $red;
+  font-size: 8vh;
+}

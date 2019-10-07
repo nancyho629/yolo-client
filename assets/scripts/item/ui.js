@@ -11,9 +11,16 @@ const getItemsSuccess = (data) => {
   $('#login-message').text('')
 }
 
-const onCreateSuccess = () => {
+const onCreateSuccess = (data) => {
   $('#message').text(`You've added a new item!!!`)
-  $('form').trigger('reset')
+  $('.prepare').removeClass('invisible')
+  $('#item-display').show().text(data.item.title).addClass('animated')
+  $('form').trigger('reset').hide()
+  setTimeout(() => {
+    $('.prepare').addClass('invisible')
+    $('#item-display').hide().text('').removeClass('animated')
+    $('form').show()
+  }, 2500)
 }
 
 const onCreateFailure = function () {

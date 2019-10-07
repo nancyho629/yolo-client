@@ -19,7 +19,7 @@ const onCreateItem = (event) => {
       ui.onCreateSuccess(responseData)
       onGetItems(event)
     })
-    .catch(ui.onCreateSuccess)
+    .catch(ui.onCreateFailure)
 }
 
 const onUpdateItem = (event) => {
