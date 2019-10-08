@@ -1,22 +1,44 @@
-<h2>YOLO Bucket</h2>
-{{#each items as |item|}}
-  <section class="return" data-id="{{item._id}}">
-    <p>
-    <strong>Title</strong>: {{item.title}}
-    <br>
-    <strong>Description:</strong> {{item.description}}
-    <br>
-    <strong>Completed:</strong> {{item.completed}}
-    <!-- {{#if item.completed}}
-    {{item.completed}}
-    <img class="completed-checkmark" src="../../../public/red_checkmark.png" alt="Complete!">}}
-    {{/if}} -->
-    </p>
-  </section>
-  <nav>
-          <button type="button" class="delete-item btn btn-danger" data-id="{{item._id}}">Delete</button>
-          <button type="button" class="update-item" data-id="{{item._id}}" data-title="{{item.title}}" data-description="{{item.description}}" data-owner="{{item.owner}}" data-completed="{{item.completed}}">Update</button>
-  </nav>
-  <hr>
+<!-- Button trigger modal -->
+<button id="modalActivate" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPreview">
+  View My YOLO Bucket List
+</button>
+<!-- Modal -->
+<div class="modal fade left" id="exampleModalPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-full-height modal-left" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalPreviewLabel">YOLO Bucket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{#each items as |item|}}
+          <section class="return" data-id="{{item._id}}">
+            <p>
+            <strong>Title</strong>: {{item.title}}
+            <br>
+            <strong>Description:</strong> {{item.description}}
+            <br>
+            <strong>Completed:</strong> {{item.completed}}
+            <!-- {{#if item.completed}}
+            {{item.completed}}
+            <img class="completed-checkmark" src="../../../public/red_checkmark.png" alt="Complete!">}}
+            {{/if}} -->
+            </p>
+          </section>
+          <nav>
+                  <button type="button" class="delete-item btn btn-danger" data-id="{{item._id}}">Delete</button>
+                  <button type="button" class="update-item" data-id="{{item._id}}" data-title="{{item.title}}" data-description="{{item.description}}" data-owner="{{item.owner}}" data-completed="{{item.completed}}">Update</button>
+          </nav>
+          <hr>
 
-{{/each}}
+        {{/each}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
