@@ -7,10 +7,10 @@ const itemEvents = require('../item/event.js')
 const addHandlers = () => {
   $('.main').on('submit', '#sign-in', onSignIn)
   $('.main').on('submit', '#sign-up', onSignUp)
-  $('.change-pwd').on('submit', '.change-password', onChangePassword)
-  $('nav').on('submit', '#sign-out', onSignOut)
-  $('nav').on('submit', '.change-pw', onGoChangePassword)
-  $('.change-pwd').on('click', '#cancel-pwd', () => { $('.change-pwd').html('') })
+  $('nav').on('submit', '.change-password', onChangePassword)
+  $('nav').on('click', '#sign-out', onSignOut)
+  // $('nav').on('submit', '.change-pw', onGoChangePassword)
+  // $('.change-pwd').on('click', '#)
 }
 
 const onSignOut = function (event) {

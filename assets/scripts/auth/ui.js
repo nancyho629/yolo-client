@@ -1,5 +1,5 @@
 'use strict'
-const changePwTemplate = require('../templates/change-pw.handlebars')
+// const changePwTemplate = require('../templates/change-pw.handlebars')
 const navBarForm = require('./../templates/navbar.handlebars')
 const signInForm = require('./../templates/auth.handlebars')
 const createForm = require('./../templates/create.handlebars')
@@ -54,10 +54,10 @@ const failure = function (data) {
   $('form').trigger('reset')
 }
 
-const goChangePassword = () => {
+// const goChangePassword = () => {
   // $('.main').html('')
-  $('.change-pwd').html(changePwTemplate())
-}
+  // $('.change-pwd').html(changePwTemplate())
+// }
 
 module.exports = {
   signOutSuccess,
@@ -66,7 +66,7 @@ module.exports = {
   signUpFailure,
   signUpSuccess,
   changePasswordSuccess,
-  goChangePassword,
+  // goChangePassword,
   signInFailure,
   changePasswordFailure
 }
