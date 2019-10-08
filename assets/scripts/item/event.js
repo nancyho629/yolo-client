@@ -15,10 +15,12 @@ const onCreateItem = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.create(data)
-    .then(responseData => {
-      ui.onCreateSuccess(responseData)
-      onGetItems(event)
-    })
+    // .then(responseData => {
+    //   ui.onCreateSuccess(responseData)
+    //   onGetItems(event)
+    // })
+    .then(ui.onCreateSuccess(data))
+    .then(onGetItems(event))
     .catch(ui.onCreateFailure)
 }
 
