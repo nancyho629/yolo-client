@@ -20,7 +20,7 @@ const onCreateSuccess = (data) => {
     $('.prepare').addClass('invisible')
     $('#item-display').hide().text('').removeClass('animated')
     $('form').show()
-  }, 2500)
+  }, 3000)
 }
 
 const onCreateFailure = function () {
@@ -30,10 +30,12 @@ const onCreateFailure = function () {
 
 const updateItemsSuccess = (data) => {
   $('#message').text(`You've updated a new item!!!`)
+  $('.modal-backdrop').remove()
 }
 
 const deleteItemSuccess = () => {
   $('#message').text(`You've deleted an item!!!`)
+  $('.modal-backdrop').remove()
 }
 
 const failure = () => {
