@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 @import '~bootstrap/scss/bootstrap';
 
 body {
   margin: 0;
   padding: 0;
-  text-align: center
+  text-align: center;
 }
 
 .nav {
@@ -25,4 +26,13 @@ body {
 #item-display {
   color: $red;
   font-size: 8vh;
+}
+
+#quotes {
+  color: #808080;
+  font-family: 'Lora', serif;
+  height: 0;
+  margin: auto;
+  padding-top: 150px;
+  text-align: center;
 }
