@@ -21,6 +21,8 @@ body {
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: zoomOutDown;
+  position: relative;
+  z-index: -1;
 }
 
 #item-display {
@@ -28,11 +30,17 @@ body {
   font-size: 8vh;
 }
 
-#quotes {
-  color: #808080;
+.content {
+  padding-top: 100px;
+}
+
+.quoteContainer {
+  color: #1B5E20;
   font-family: 'Lora', serif;
+  font-size: 20px;
   height: 0;
   margin: auto;
-  padding-top: 150px;
+  max-width: 750px;
+  padding-top: 100px;
   text-align: center;
 }
