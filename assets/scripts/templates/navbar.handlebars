@@ -1,5 +1,5 @@
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+<nav class="navbar navbar-expand-lg navbar-dark success-color-dark">
 
   <!-- Navbar brand -->
   <a class="navbar-brand" href="#">YOLO</a>
@@ -14,13 +14,13 @@
   <div class="collapse navbar-collapse" id="basicExampleNav">
 
     <!-- Links -->
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav ml-auto">
       <!-- Dropdown -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Change Password</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-          <form class='change-password' class = 'border'>
+          <form class="change-password form-inline" class="border">
             <fieldset>
               <legend>Change Password</legend>
               <input type="password" name="passwords[old]" placeholder="Current password">
@@ -30,10 +30,10 @@
           </form>
         </div>
       </li>
-      <li class="nav-item">
+      <li class="nav-item mr-auto">
         <form id="sign-out">
           <fieldset>
-            <button type='submit' class="btn btn-danger" value='Sign out'>Sign Out</button>
+            <button type="submit" class="btn btn-danger my-2 my-sm-0" value="Sign out">Sign Out</button>
           </fieldset>
         </form>
       </li>
