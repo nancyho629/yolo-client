@@ -1,20 +1,39 @@
-<!-- Sign Up Form -->
-<form id='sign-up'>
-  <fieldset>
-    <input type="email" name="credentials[email]" placeholder="email">
-    <input type="password" name="credentials[password]" placeholder="password">
-    <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-    <input type="submit" value="Sign Up">
-  </fieldset>
-</form>
-<!-- Sign Up Form -->
-<a>Already a user? Sign In</a>
-<!-- Sign In Form -->
-<form id='sign-in'>
-  <fieldset>
-    <input type="email" name="credentials[email]" placeholder="email">
-    <input type="password" name="credentials[password]" placeholder="password">
-    <input type="submit" value="Sign In">
-  </fieldset>
-</form>
-<!-- Sign In Form -->
+<h2>Yolo Bucket List</h2>
+<div class="sign-in-container">
+<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin"
+      aria-selected="true">Sign In</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup"
+      aria-selected="false">Sign Up</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+  <!-- Sign In Form -->
+  <form id='sign-in'>
+    <fieldset>
+      <input type="email" name="credentials[email]" placeholder="email">
+      <input type="password" name="credentials[password]" placeholder="password">
+      <input type="submit" value="Sign In">
+    </fieldset>
+  </form>
+      <!-- <p>Not a user yet? <a href="#sign-up">Sign Up!</a></p> -->
+  <!-- Sign In Form -->
+ </div>
+  <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+    <!-- Sign Up Form -->
+    <form id='sign-up'>
+      <fieldset>
+        <input type="email" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+        <input type="submit" value="Sign Up">
+      </fieldset>
+    </form>
+    <!-- Sign Up Form -->
+  </div>
+</div>
+</div>
