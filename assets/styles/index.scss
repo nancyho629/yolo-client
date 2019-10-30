@@ -1,19 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 @import '~bootstrap/scss/bootstrap';
 
 body {
+  background-image: url('public/winter.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  font-family: Lobster;
   margin: 0;
   padding: 0;
   text-align: center;
-}
-
-.nav {
-  align-items: flex-end;
-}
-
-#title {
-  background-color: green;
-  padding-bottom: 10px;
 }
 
 .animated {
@@ -25,13 +23,30 @@ body {
   z-index: -1;
 }
 
+.content {
+  padding-top: 100px;
+}
+
 #item-display {
   color: $red;
   font-size: 8vh;
 }
 
-.content {
-  padding-top: 100px;
+.item-messages, .login-messages, .messages {
+  font-size: 20px;
+}
+
+.main {
+  background-color: white;
+  font-size: 20px;
+  opacity: .9;
+}
+
+.modal-body {
+  font-size: 20px;
+}
+.row {
+  padding-top: 25px;
 }
 
 .quoteContainer {
@@ -41,6 +56,23 @@ body {
   height: 0;
   margin: auto;
   max-width: 750px;
-  padding-top: 100px;
+  padding-top: 80px;
   text-align: center;
+}
+
+.sign-in-container {
+
+  fieldset {
+    border: 1px groove;
+    margin: 0 0 1.5em;
+    padding: 1.4em;
+    width: inherit;
+  }
+
+  legend {
+    border-bottom: 0;
+    padding: 0 10px;
+    width: inherit;
+  }
+
 }
