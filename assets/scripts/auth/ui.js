@@ -7,13 +7,15 @@ const store = require('../store')
 
 const signOutSuccess = function () {
   store.user = null
-  $('#login-message').text('Signed Out Successfully')
+  // $('#login-message').text('Signed Out Successfully')
   $('#message').text('')
   $('#item-message').text('')
   $('.main').html(signInForm)
   $('nav').html('')
   $('.content').html('')
   $('.change-pwd').html('')
+  $('body').css({'background-image': 'url(public/winter.jpg)'})
+  $('#quotes').html('')
 }
 
 const signInSuccess = function (data) {
@@ -21,6 +23,7 @@ const signInSuccess = function (data) {
   $('#login-message').text('Signed In Successfully')
   $('.main').html(createForm)
   $('nav').html(navBarForm)
+  $('body').css({'background-image': 'none'})
 
   const quotes =
 [
