@@ -7,7 +7,7 @@ const getItemsSuccess = (data) => {
   const indexItemsHtml = indexItemsTemplate({ items: data.items })
   $('.content').html(indexItemsHtml)
   $('form').trigger('reset')
-  $('#item-message').text('Got All Your Bucket List Items!')
+  // $('#item-message').text('Got All Your Bucket List Items!')
   $('#login-message').text('')
 }
 
