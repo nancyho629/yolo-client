@@ -16,6 +16,7 @@ const signOutSuccess = function () {
   $('.change-pwd').html('')
   $('body').css({'background-image': 'url(public/winter.jpg)'})
   $('#quotes').html('')
+  clearInterval(store.interval)
 }
 
 const signInSuccess = function (data) {
@@ -55,7 +56,7 @@ const signInSuccess = function (data) {
 
   let i = 0
 
-  setInterval((function quoteSlider () {
+  store.interval = setInterval((function quoteSlider () {
     $('#quotes').html(quotes[i])
     if (i === quotes.length) {
       i = 0
@@ -64,6 +65,11 @@ const signInSuccess = function (data) {
     }
     return quoteSlider
   })(), 60000)
+
+  // this.stop = function () {
+  //   clearInterval(interval)
+  // }
+  // return this
 }
 
 const signInFailure = function (data) {
