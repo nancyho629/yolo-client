@@ -1,25 +1,23 @@
-Team members: Martin, Elina, Nancy, Lance
-
 # Yolo Bucket
-YOLO Buckets is a web app for managing your own personal bucket list! Once signed in, you can add goals to your bucket list. You can update them by altering their title or description, and you can mark them as completed once you've done them.
+YOLO Bucket is a web app for managing your own personal bucket list! YOLO Bucket is the place to keep track of all the number of experiences or achievements you have or accomplish during your lifetime. You only live once after all!
+
+Once signed in, you can add goals to your bucket list. You can update them by altering their title or description, and you can mark them as completed once you've done them.
 
 The list items are stored in the back-end, which is queried whenever you want to view/create/update/delete your bucket list.
 
 ## Technologies Used
 * Mongoose
 * MongoDB
-* Express API
-* Node
+* ExpressJS
+* Node.js
+
 We used HTML and Handlebars for the page's structure, along with JavaScript for attaching event listeners, handling events, making API calls and updating the UI.
-On the back-end, we used Mongoose and Express to set up a NoSQL database that is able to CRUD our list items.
+On the back-end, we used Mongoose and ExpressJS to set up a NoSQL database that is able to CRUD our list items.
 
- Our back-end repo: https://github.com/Team-ELMN/yolo-api
-
- Links:
- - [Yolo Bucket Deployed Website](https://team-elmn.github.io/yolo-client/)
- - [Yolo Bucket Client Repo](https://github.com/Team-ELMN/yolo-client)
- - [Yolo Bucket API Repo](https://github.com/Team-ELMN/yolo-api)
- - [Yolo Bucket API Deployed](https://yolo-bucket-api.herokuapp.com/)
+ - [Yolo Bucket Deployed Website](https://nancyho629.github.io/yolo-client/)
+ - [Yolo Bucket Client Repo](https://github.com/nancyho629/yolo-client)
+ - [Yolo Bucket API Repo](https://github.com/nancyho629/yolo-api)
+ - [Yolo Buckket API Deployed](https://yoloapi.herokuapp.com/)
 
  ## Future Features
  - Implement a one to many relationship so users can have many bucketlists and bucketlists can have many items
